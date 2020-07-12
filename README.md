@@ -9,3 +9,9 @@ guest/guest
 ##### Spring Cloud Data Flow Dashboard
 http://localhost:9393/dashboard \
 admin/admin
+
+##### MySQL workbench gui access
+http://localhost:3010
+
+###### references
+https://hub.docker.com/r/linuxserver/mysql-workbench
