@@ -20,7 +20,7 @@ version: '3'
 services:
   mysql:
     image: mysql:5.7.25
-    container_name: dataflow-mysql
+    container_name: mysql
     environment:
       MYSQL_DATABASE: dataflow
       MYSQL_USER: root
@@ -29,7 +29,7 @@ services:
       - 3306
   mysql-workbench:
     image: linuxserver/mysql-workbench
-    container_name: dataflow-mysql-workbench
+    container_name: mysql-workbench
     environment:
       - PUID=1000
       - PGID=1000

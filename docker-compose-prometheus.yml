@@ -32,7 +32,7 @@ services:
 
   prometheus-rsocket-proxy:
     image: micrometermetrics/prometheus-rsocket-proxy:0.11.0
-    container_name: dataflow-prometheus-rsocket-proxy
+    container_name: prometheus-rsocket-proxy
     expose:
       - '9096'
       - '7001'
@@ -46,12 +46,12 @@ services:
 
   grafana:
     image: springcloud/spring-cloud-dataflow-grafana-prometheus:${DATAFLOW_VERSION:?DATAFLOW_VERSION is not set! Use 'export DATAFLOW_VERSION=local-server-image-tag'}
-    container_name: dataflow-grafana
+    container_name: grafana
     ports:
       - '3000:3000'
 
   prometheus:
     image: springcloud/spring-cloud-dataflow-prometheus-local:${DATAFLOW_VERSION:?DATAFLOW_VERSION is not set! Use 'export DATAFLOW_VERSION=local-server-image-tag'}
-    container_name: dataflow-prometheus
+    container_name: prometheus
     ports:
       - '9090:9090'
