@@ -27,23 +27,22 @@ services:
       MYSQL_ROOT_PASSWORD: rootpw
     expose:
       - 3306
-  mysql-workbench:
-    image: linuxserver/mysql-workbench
-    container_name: mysql-workbench
-    environment:
-      - PUID=1000
-      - PGID=1000
-      - TZ=America/New_York
-    # volumes:
-    #   #- /path/to/config:/config
-    #   - /etc/localtime:/etc/localtime:ro
-    ports:
-      - 3010:3000
-    cap_add:
-      - IPC_LOCK
-    restart: unless-stopped
-    depends_on:
-      - mysql
+  # mysql-workbench:
+  #   image: linuxserver/mysql-workbench
+  #   container_name: mysql-workbench
+  #   environment:
+  #     - PUID=1000
+  #     - PGID=1000
+  #     - TZ=America/New_York
+  #   volumes:
+  #     - ${HOST_MOUNT_PATH:-.}:/config
+  #   ports:
+  #     - 3010:3000
+  #   cap_add:
+  #     - IPC_LOCK
+  #   restart: unless-stopped
+  #   depends_on:
+  #     - mysql
 
   # kafka-broker:
   #   image: confluentinc/cp-kafka:5.3.1

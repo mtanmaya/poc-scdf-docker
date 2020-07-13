@@ -32,3 +32,11 @@ data/mnesia/rabbit@rabbit/nodes_running_at_shutdown
 data/mnesia/rabbit@rabbit/rabbit_serial
 data/mnesia/rabbit@rabbit/schema.DAT
 data/mnesia/rabbit@rabbit/schema_version
+data/*
+.local/share/keyrings/default
+.dbus/session-bus/18a362f8fc16867058d208c75ef66adc-10
+.bashrc
+*.keyring
+*.txt
+.mysql/workbench/server_instances.xml
+startwm.sh
